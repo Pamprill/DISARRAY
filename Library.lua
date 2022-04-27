@@ -416,9 +416,9 @@ function library:init(Title)
             toggled = not toggled 
 
             if (toggled) then 
-                workspace.Enabled = true
+                dragging.Visible = true
             else
-                workspace.Enabled = false
+                dragging.Visible = false
             end
         end
     end)
