@@ -408,17 +408,19 @@ function library:init(Title)
 
         return (sections)
     end
-
+    
+    local toggled = true
     inputservice.InputBegan:Connect(function(Bind)
-        local toggled = true
 
         if (Bind.KeyCode == library.currentBind) then 
             toggled = not toggled 
-
+            
             if (toggled) then 
                 dragging.Visible = true
+                print('1')
             else
                 dragging.Visible = false
+                print('2')
             end
         end
     end)
@@ -427,5 +429,3 @@ function library:init(Title)
     
     return (funcs)
 end
-
-return (library)
