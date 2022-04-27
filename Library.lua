@@ -9,7 +9,7 @@ local library = {
     registry = {}
 }
 
-function library:gc(element)
+function library:gc(Element)
     table.insert(library.registry, element)
 end
 
@@ -303,7 +303,7 @@ function library:init(Title)
                     function()
                         toggled.Value = not toggled.Value
 
-                        if (toggled) then
+                        if (toggled.Value) then
                             toggle.BackgroundColor3 = library.accentColor
                         else
                             toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -391,7 +391,7 @@ function library:init(Title)
                     function()
                         toggled.Value = not toggled.Value
 
-                        if (toggled) then
+                        if (toggled.Value) then
                             toggle.BackgroundColor3 = Color3.fromRGB(60, 105, 255)
                         else
                             toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -416,9 +416,9 @@ function library:init(Title)
             toggled = not toggled 
 
             if (toggled) then 
-                workspace.Visible = true
+                workspace.Enabled = true
             else
-                workspace.Visible = false
+                workspace.Enabled = false
             end
         end
     end)
@@ -428,4 +428,4 @@ function library:init(Title)
     return (funcs)
 end
 
-return library
+return (library)
