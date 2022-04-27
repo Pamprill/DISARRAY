@@ -10,7 +10,7 @@ local library = {
 }
 
 function library:gc(Element)
-    table.insert(library.registry, element)
+    table.insert(library.registry, Element)
 end
 
 function library:setDraggable(Element)
@@ -429,3 +429,5 @@ function library:init(Title)
     
     return (funcs)
 end
+
+return library
